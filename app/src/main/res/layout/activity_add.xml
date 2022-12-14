@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <FrameLayout
+        android:background="#4CAF50"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:src="@drawable/back"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center|start"
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bebas_neue"
+            android:gravity="center"
+            android:text="Tambah Tugas"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+        <LinearLayout
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/kagegori_tugas"
+                android:layout_marginTop="20dp"
+                app:hintEnabled="false"
+                style= "@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <AutoCompleteTextView
+                    android:id="@+id/dropdown_kategori_tugas"
+                    android:inputType="none"
+                    android:hint="Pilih Kategori"
+                    android:fontFamily="@font/bebas_neue"
+                    android:background="@drawable/bg_rounded_input_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/judul_tugas"
+                android:background="@drawable/bg_rounded_input_text"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bebas_neue"
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:hint="Masukkan Judul Tugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/deskripsi_tugas"
+                android:background="@drawable/bg_rounded_input_text"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bebas_neue"
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:hint="Masukkan Deskripsi Tugas"
+                android:minHeight="200dp"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/bebas_neue"
+                app:backgroundTint="#4CAF50"
+                android:text="Tambah tugas"
+                android:background="@drawable/bg_rounded_input_text"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
