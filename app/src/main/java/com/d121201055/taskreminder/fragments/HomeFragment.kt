@@ -40,6 +40,7 @@ class HomeFragment : Fragment() {
       }else{
          binding.meja.visibility = View.GONE
          binding.recycleTugas.visibility = View.VISIBLE
+
       }
    }
 }
